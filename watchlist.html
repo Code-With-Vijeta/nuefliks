@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="./images/favicon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Nuefliks</title>
+  </head>
+  <body>
+    <!-- main content  -->
+
+    <div class="container-fluid">
+      <!-- navbar section starts -->
+
+      <div class="nav flex">
+        <div class="logo"><a href="./index.html">Nuefliks</a></div>
+        <div class="navbar flex" id="navbar">
+          <div class="search-container flex">
+            <input type="text" id="search-bar" placeholder="Search..." />
+            <span class="fa fa-search" aria-hidden="true"></span>
+          </div>
+          <div class="right-nav flex">
+            <a href="./sign.html" class="sign-in" style="text-decoration: none"
+              >SIGN IN</a
+            >
+            <img id="profile-pic" src="./images/profile.jfif" alt="profile" />
+            <span class="fa fa-caret-down" aria-hidden="true"></span>
+            <button
+              class="theme-toggle"
+              style="margin-bottom: 10px"
+              onclick="toggleTheme()"
+            >
+              🌙
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- navbar section ends -->
+
+      <!-- banner section starts -->
+
+      <div class="inner">
+        <div class="banner flex">
+          <h3 style="color: #f32170">#1 IN INDIA</h3>
+          <h2 style="color: #f32170">
+            STREE2- <span style="color: white">SARKATE KA AATANK</span>
+          </h2>
+          <h5>
+            The film stars Rajkummar Rao, Shraddha Kapoor. The narrative follows
+            a group of friends who ....
+          </h5>
+          <h4 style="color: #f32170">
+            <img
+              class="membership"
+              src="./images/membership.png"
+              alt="membership"
+            />Watch with membership
+          </h4>
+          <div class="banner-button flex">
+            <button class="sign-in">
+              <a
+                href="./register.html"
+                style="text-decoration: none; color: white"
+                >Sign Up</a
+              >
+            </button>
+            <button class="btn btn1">
+              <i class="bx bxs-movie-play"></i>
+              Watchlist
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="video-container">
+      <div class="color-overlay">
+        <img
+          style="height: 100%; width: 100%; object-fit: cover"
+          src="./images/main.jpg"
+          alt="#"
+        />
+      </div>
+    </div>
+
+    <!-- banner section ends -->
+
+    <!-- content details section starts -->
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <h3 style="text-align: center; color: #f32170"># RELEASES NOW</h3>
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="./images/shame.jpg"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Bootstrap Themes"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- about -->
+        <div class="col-lg-6">
+          <h1
+            class="display-5 fw-bold text-body-emphasis lh-1 mb-3"
+            style="color: #f32170 !important"
+          >
+            SHAME
+          </h1>
+          <p class="lead">
+            We see Brandon taking the underground again and he sees the young
+            woman from the first sequence. She is staring at him. Although we
+            can think that Brandon's gaze on her seems to have changed, we don't
+            know what will happen next because the film stops at this moment.
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button class="info-btn">
+              <a href="" style="text-decoration: none; color: white"
+                >MORE-INFO</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- content details section ends -->
+
+    <!-- trending movies section starts -->
+
+    <div class="carousel_trending" style="margin-top: 0;">
+      <div class="carousel-heading">
+        <h3 style="padding-left: 36px; color: #f32170">Trending Movies</h3>
+        <div class="filter-container">
+          <!-- filter method -->
+          <select id="filter-select">
+            <option value="all">All Movies</option>
+            <option value="india">India's Movies</option>
+            <option value="more">More Options</option>
+          </select>
+
+          <!-- sorting method -->
+          <select id="sort-select">
+            <option value="default">Sort By</option>
+            <option value="release-date-asc">Release Date: Ascending</option>
+            <option value="release-date-desc">Release Date: Descending</option>
+            <option value="alphabetical-asc">Title: A-Z</option>
+            <option value="alphabetical-desc">Title: Z-A</option>
+          </select>
+        </div>
+      </div>
+      <div class="carousel-slider">
+        <div class="carousel-list"></div>
+      </div>
+    </div>
+
+    <!-- trending movies section ends -->
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-card">
+          <span class="close-button">&times;</span>
+          <div class="modal-trailer">
+            <video id="modal-video" autoplay loop controls></video>
+          </div>
+          <div class="modal-info">
+            <h2 id="movie-title" style="color: #f32170">Movie Title</h2>
+            <p id="movie-description">Movie description goes here.</p>
+            <p>
+              <strong style="color: #f32170">Release Date:</strong>
+              <span id="release-date">YYYY-MM-DD</span>
+            </p>
+            <p id="trending-number" style="color: #f32170"></p>
+            <div class="star-rating" data-rating="0">
+              <span class="star" data-value="1">&#9733;</span>
+              <span class="star" data-value="2">&#9733;</span>
+              <span class="star" data-value="3">&#9733;</span>
+              <span class="star" data-value="4">&#9733;</span>
+              <span class="star" data-value="5">&#9733;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal section ends -->
+
+    <!-- top rated movies section starts -->
+    <h3 style="padding-left: 36px; margin-top: 50px; color: #f32170">
+      Top Rated Movies
+    </h3>
+
+    <div class="featurettes">
+      <!-- featurette 1 -->
+      <div class="featurette">
+        <div class="featurette-video">
+          <video autoplay muted loop>
+            <source src="./jawan-trailer.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <h4>Gumraah</h4>
+        <p>
+          Arjun later confesses to confronting Akash about his past with Janhvi.
+          Akash admits to raping Janhvi, leading to her accidental death, and
+          bribing the police to cover up the incident.
+        </p>
+        <div class="star-rating" data-rating="0">
+          <span class="star" data-value="1">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <button class="watchlist-btn">+ Add to Watchlist</button>
+      </div>
+
+      <!-- featurette 2 -->
+      <div class="featurette">
+        <div class="featurette-video">
+          <video autoplay muted loop>
+            <source src="./bloody_ishq-trailer.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <h4>Bad News</h4>
+        <p>
+          Saloni Bagga is a chef who dreams of her restaurant winning the Meraki
+          Star. She meets Akhil Chadha and they hit it off immediately and get
+          married soon.
+        </p>
+        <div class="star-rating" data-rating="0">
+          <span class="star" data-value="1">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <button class="watchlist-btn">+ Add to Watchlist</button>
+      </div>
+
+      <!-- featurette 3 -->
+      <div class="featurette">
+        <div class="featurette-video">
+          <video autoplay muted loop>
+            <source src="./madgaon_express-trailer.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <h4>Madgaon Express</h4>
+        <p>
+          In 1998 in Mumbai, Dhanush Sawant aka Dodo, Pratik Garodia aka Pinku
+          and Ayush Gupta study in the 10th standard and dream of going to Goa
+          after their board examinations.
+        </p>
+        <div class="star-rating" data-rating="0">
+          <span class="star" data-value="1">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <button class="watchlist-btn">+ Add to Watchlist</button>
+      </div>
+    </div>
+    <!-- top rated movies section ends -->
+
+    <!-- watchlist section starts -->
+    <h3 style="color: #f32170; padding-left: 36px" class="watchlist-name">
+      Your Watchlist
+    </h3>
+    <!-- when watchlist have some movies  -->
+    <div id="watchlist-container"></div>
+    <!-- when watchlist is empty -->
+    <div id="empty-message">Your watchlist is empty.</div>
+    <!-- watchlist section ends -->
+
+    <!-- related movies section starts -->
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+        <h3 style="padding-left: 36px" class="related-movies">
+          Related Movies
+        </h3>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <!-- movie 1 : persona -->
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-img-top">
+                <img src="./images/persona.jpg" alt="Thumbnail image" />
+                <video
+                  src="./persona_trailer.mp4"
+                  class="hover-video"
+                  loop
+                  control
+                  autoplay
+                ></video>
+              </div>
+              <div class="card-body">
+                <h4 style="color: #f32170">Persona</h4>
+                <p class="card-text">
+                  What is the idea and meaning of the film the "Person" 1966 by
+                  Ingmar Bergman? Persona is about identity and the self.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- movie 2 : valentine -->
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-img-top">
+                <img src="./images/valentine.jpg" alt="Thumbnail image" />
+                <video
+                  src="./valentine_trailer.mp4"
+                  class="hover-video"
+                  loop
+                  control
+                  autoplay
+                ></video>
+              </div>
+              <div class="card-body">
+                <h4 style="color: #f32170">Valentine</h4>
+                <p class="card-text">
+                  A group of women in San Francisco who are stalked by a killer
+                  wearing a Cupid mask in the days leading up to Valentine's
+                  Day.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- movie 3 : munich -->
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-img-top">
+                <img src="./images/munich.avif" alt="Thumbnail image" />
+                <video
+                  src="./munich_trailer.mp4"
+                  class="hover-video"
+                  loop
+                  control
+                  autoplay
+                ></video>
+              </div>
+              <div class="card-body">
+                <h4 style="color: #f32170">Munich</h4>
+                <p class="card-text">
+                  The real mission to take out Palestinian terrorists involved
+                  with the plotting of the massacre at the 1972 Munich Olympics.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- movie 4 : malencholia -->
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-img-top">
+                <img src="./images/malencholia.jpg" alt="Thumbnail image" />
+                <video
+                  src="./malencholia_trailer.mp4"
+                  class="hover-video"
+                  loop
+                  control
+                  autoplay
+                ></video>
+              </div>
+              <div class="card-body">
+                <h4 style="color: #f32170">Malencholia</h4>
+                <p class="card-text">
+                  Two sisters find their strained relationship challenged as a
+                  mysterious planet named threatens collide with Earth.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- movie 5 : sunrise -->
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-img-top">
+                <img src="./images/sunrise.jpg" alt="Thumbnail image" />
+                <video
+                  src="./sunrise_trailer.mp4"
+                  class="hover-video"
+                  loop
+                  control
+                  autoplay
+                ></video>
+              </div>
+              <div class="card-body">
+                <h4 style="color: #f32170">Sunrise</h4>
+                <p class="card-text">
+                  When an ex-cop named Fallon returns to the scene of a horrific
+                  crime, the residents of a rural town soon discover a vampire
+                  who feeds on blood and fear.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- movie 6 : vice -->
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-img-top">
+                <img src="./images/vice.jpg" alt="Thumbnail image" />
+                <video
+                  src="./vice_trailer.mp4"
+                  class="hover-video"
+                  loop
+                  control
+                  autoplay
+                ></video>
+              </div>
+              <div class="card-body">
+                <h4 style="color: #f32170">Vice</h4>
+                <p class="card-text">
+                  The film is allegorical in nature, lifting from teachings of
+                  Elisabeth Kübler-Ross in over-coming a death of a loved one or
+                  the erosion of a close relationship.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- related movies section starts -->
+
+    <!-- footer section starts -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <h2 class="logo"><a href="./ott.html">Nuefliks</a></h2>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="./sign.html">Sign In</a></li>
+            <li><a href="./register.html">Register</a></li>
+            <li><a href="./browse.html">Browse</a></li>
+            <li><a href="./content.html">Content Detail</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="./about.html">FAQ</a></li>
+            <li><a href="./contact.html">Ways to Watch</a></li>
+            <li><a href="./privacy.html">Cookie Preferences</a></li>
+            <li><a href="./terms.html">Help Centre</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          <span style="color: #f32170">© Vijeta Nehra</span> | Created with
+          passion for streaming | 2024
+        </p>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <i class="bx bxl-facebook social-icon"></i>
+            <i class="bx bxl-instagram social-icon"></i>
+            <i class="bx bxl-twitter social-icon"></i>
+            <i class="bx bxl-youtube social-icon"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section ends -->
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
