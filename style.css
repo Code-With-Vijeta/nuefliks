@@ -989,9 +989,6 @@ body.dark-theme {
     flex: 1 1 120px;
     max-width: 120px;
   }
-  .carousel_trending{
-    margin-top: 70px;
-  }
   .footer-container {
     flex-direction: row;
     justify-content: space-between;
