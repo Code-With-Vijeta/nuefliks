@@ -982,6 +982,9 @@ body.dark-theme {
   }
 }
 @media (max-width: 600px) {
+  .carousel_trending{
+    margin-top:200px;
+}
   .genre-carousel .carousel-item {
     flex: 1 1 120px;
     max-width: 120px;
